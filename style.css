@@ -48,7 +48,7 @@ a {
 }
 
 main {
-    width: 60vw;
+    width: 70vw;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -89,9 +89,9 @@ main {
 }
 
 .skills {
-    display: flex;
-    justify-content: space-around;
-    gap: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    gap: 20px;
     padding: 30px 10px;
 }
 
@@ -107,6 +107,7 @@ main {
     align-items: center;
     box-shadow: 0 0 3px lightgrey;
     padding: 30px 10px;
+
 }
 
 .description {
@@ -163,12 +164,102 @@ footer ul {
 
 .white {
     color: white;
-    padding: 40px 0;
 }
 
 .rights {
     display: flex;
-    width: 12%;
+    width: 20vw;
     justify-content: space-between;
     color: lightgrey;
+    gap: 20px;
+    padding: 20px;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    justify-content: center;
+    align-items: center;
+}
+.title-pr {
+    font-size: 60px;
+}
+.project {
+    display: flex;
+    margin-bottom: 30px;
+    justify-content: space-between;
+    box-shadow: 0 0 3px gray;
+}
+
+.project-description {
+    padding: 60px 20px;
+    border-bottom: 10px solid goldenrod;
+}
+
+.project-description h2 {
+    font-size: 40px;
+    text-align: center;
+    color: goldenrod;
+    margin-bottom: 20px;
+}
+
+img {
+    width: 50%;
+    margin-right: 20px;
+    object-fit: contain;
+}
+
+@media all and (max-width: 1000px) {
+    header {
+        width: 90vw;
+    }
+    .info {
+        width: 85%;
+    }
+    .rights {
+        width: 50%;
+    }
+    .skills {
+        grid-template-columns: 80vw;
+    }
+}
+
+@media all and (max-width: 700px) {
+    header {
+        width: 100vw;
+    }
+
+    .info {
+         width: 100%;
+    }
+
+    .rights {
+        width: 100%;
+    }
+
+    .skills {
+        grid-template-columns: 100vw;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+        gap: 10px;
+    }
+}
+
+@media all and (max-width: 1400px) {
+    .project {
+        flex-direction: column;
+    }
+    img {
+        width: 100%;
+    }
 }
