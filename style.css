@@ -73,6 +73,7 @@ main {
 .avatar {
     width: 200px;
     margin: 20px 0;
+    border-radius: 50%;
 }
 
 .info {
